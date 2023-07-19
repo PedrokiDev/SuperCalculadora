@@ -48,6 +48,7 @@ public class telaCalc extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Javanese Text", 1, 18)); // NOI18N
         jLabel1.setText("Super Calculadora");
@@ -199,12 +200,9 @@ public class telaCalc extends javax.swing.JFrame {
         int valAbs = Math.abs(a);
         
         lblResto2.setText(Integer.toString(div));
-        lblCubo.setText(Double.toString(resCub));
-        
-        DecimalFormat df = new DecimalFormat("#.##");
-        
-        lblRaizQuad.setText(df.format(raizQuad));
-        lblRaizCub.setText(df.format(raizCub));
+        lblCubo.setText(Double.toString(resCub));      
+        lblRaizQuad.setText(String.format("%.2f",raizQuad));
+        lblRaizCub.setText(String.format("%.2f",raizCub));
         lblAbs.setText(Integer.toString(valAbs));
         
         panelRes.setVisible(true);
